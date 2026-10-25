@@ -41,7 +41,7 @@ create policy "apagar meus treinos" on public.workouts for delete to authenticat
 -- Código de convite: fica num schema que a API não expõe
 create schema if not exists private;
 create table private.settings (invite_code text not null);
-insert into private.settings values ('TROQUE-ESTE-CODIGO');
+insert into private.settings values ('ROLEZADAFIT');
 
 -- Ao criar conta: confere o convite e cria o perfil
 create function public.handle_new_user() returns trigger
